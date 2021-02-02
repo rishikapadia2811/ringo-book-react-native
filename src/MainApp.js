@@ -10,7 +10,6 @@ import {
 import SplashFlowNavigator from './navigation/flows/SplashFlowNavigator';
 import LoginFlowNavigator from './navigation/flows/LoginFlowNavigator';
 import AfterLoginFlowDrawerNavigator from './navigation/flows/AfterLoginFlowDrawerNavigator';
-import strings from './localization/Localization';
 
 const Stack = createStackNavigator();
 
@@ -65,7 +64,6 @@ const MainApp = () => {
 
   const changeRTLDirection = async () => {
     if (AppSettingsState.app_language) {
-      await strings.setLanguage(AppSettingsState.app_language.key);
       if (AppSettingsState.app_language.isRTL) await I18nManager.forceRTL(true)
       else await I18nManager.forceRTL(false)
     }

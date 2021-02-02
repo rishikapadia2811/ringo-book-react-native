@@ -11,7 +11,6 @@ import colors from '../../helpers/Colors';
 import CustomLabelTextInput from '../../components/CommonComponents/CustomLabelTextInput';
 import CustomButton from '../../components/CommonComponents/CustomButton';
 import { AuthContext } from '../../context/GetContexts';
-import strings from '../../localization/Localization';
 
 const LoginScreen = ({ navigation }) => {
   const [authData, setAuthData] = useState();
@@ -40,7 +39,7 @@ const LoginScreen = ({ navigation }) => {
               style={styles.fingerPrintImageContainer}
           />
         <CustomText style={styles.titleText} >
-          {strings.ringo}{'\n'}
+          RINGO{'\n'}
           REAL-ESTATE{'\n'}
           @{'\n'}
           YOUR HAND

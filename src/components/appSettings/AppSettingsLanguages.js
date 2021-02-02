@@ -10,12 +10,10 @@ import colors from '../../helpers/Colors';
 import fonts from '../../helpers/Fonts';
 import CustomImage from '../CommonComponents/CustomImage';
 import AsyncKeys from '../../constants/AsyncKeys';
-import strings from '../../localization/Localization';
 
 const AppSettingsLanguages = () => {
   const { state: AppSettingsState, setAppSettings } = useContext(AppSettingsContext);
   const onSingleLanguagePress = (item) => {
-    strings.setLanguage(item.key);
     setAppSettings(AsyncKeys.APP_LANGUAGE, item);
   }
   const renderLanguages = ({ item }) => (
@@ -47,7 +45,6 @@ const AppSettingsLanguages = () => {
   )
   return (
     <>
-      <CustomText>{strings.ok}</CustomText>
       <FlatList
         keyExtractor={(item, index) => index?.toString()}
         data={appLanguages}
